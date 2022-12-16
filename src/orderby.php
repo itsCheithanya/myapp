@@ -3,7 +3,7 @@ include ('config/db_connect.php');
 $safe_value = mysqli_real_escape_string($conn,$_POST['search']);
 //$sql='SELECT * FROM EventList';
 $sql="SELECT * FROM EventList WHERE Etype LIKE '$safe_value' ";
-echo print_r($sql);
+#echo print_r($sql);
 //echo $safe_value;
 $result=mysqli_query($conn,$sql);
 $donors=mysqli_fetch_all($result,MYSQLI_ASSOC);
